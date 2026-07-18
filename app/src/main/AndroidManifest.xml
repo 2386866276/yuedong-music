@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yuedong.music">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_config"
+        android:requestLegacyExternalStorage="true">
+
+        <!-- 修改 1：开屏页设置为启动页 -->
+        <activity
+            android:exported="true"
+            android:name="com.yuedong.music.SplashActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar"> <!-- 使用黑底无标题栏主题 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 修改 2：主页移除启动意图，改为普通页 -->
+        <activity
+            android:name="com.yuedong.music.MainActivity"
+            android:label="@string/app_name" />
+
+        <!-- 注册服务 -->
+        <service android:name=".MusicService" android:exported="false"/>
+
+    </application>
+
+</manifest>
