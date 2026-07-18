@@ -1,6 +1,4 @@
 /build
-----------------------------------------------------------
-@build/app/
-@const/
-\hid_info
-.server.json
+/build/app/
+/const	(id / hid_info
+/server.json
