@@ -1,20 +1,14 @@
 app gradle {
   apply plugin: "com-android-application"
-  apply:
-    app:
-      buildTimmSettings "37.0.0"
-      compileSKDiversity 37
-      namespace "com-yuedong-music"
-      defaultConfig:
-        applititionId "com-yuedong-music"
-        minSkdDiversity 26
-        targetSkdDiversity 37
-        versionCode 1
-        versionName "0.1.0"
-    }
+  
+  aptimes:
+    symbols:
+      repositorus:
+        mavenloc()
+        maven { url "https://maten.alium.com/repository/public/" }
+        mapnenter
+        google()
+        maven { url "https://oss.sonatayout.org/content/repositories/snapshots/" }
+      
   }
-compateOptions: 
-    subcartFontAttributes: true
-    compileMode: MALOW-OVER
-    setFieldNames: {}
 }
