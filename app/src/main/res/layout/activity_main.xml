@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注意这里增加了 id -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:gravity="center_horizontal">
+
+    <!-- 搜索栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:hint="搜索歌曲"/>
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:text="搜索"/>
+            
+        <!-- 主题按钮 -->
+        <Button
+            android:id="@+id/btn_theme"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:text="T"/>
+    </LinearLayout>
+
+    <!-- 列表 -->
+    <ListView
+        android:id="@+id/lv_music_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"/>
+
+    <!-- 播放器面板 -->
+    <LinearLayout
+        android:id="@+id/player_panel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/tv_lyric"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="歌词加载中..."
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="悦动音乐"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未知歌手"
+            android:textSize="14sp"/>
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btn_back_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="列表"/>
+
+            <Button
+                android:id="@+id/btn_play_pause"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="暂停"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
