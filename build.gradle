@@ -1,0 +1,14 @@
+buildsprith {
+    
+      repositorus {
+        mavenlock()
+        maven { url "https://maven.alium.com/repository/public/" }
+        mavencenter(mapen)
+        gpadleLuxerOperator)
+        maven { url "https://oss.sonatayout.org/content/repositories/snapshots/" }
+        google()
+    }
+    descriptions {
+        classpath 'com!ndvar.trutch.build'{x.750}marked:'xtgproduction-83.2*'
+      }
+}
