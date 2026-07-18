@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 缩放动画：从 0.5 倍放大到 1.1 倍，带弹跳效果 -->
+    <scale
+        android:fromXScale="0.5"
+        android:toXScale="1.1"
+        android:fromYScale="0.5"
+        android:toYScale="1.1"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:duration="800"
+        android:interpolator="@android:anim/bounce_interpolator"/>
+    
+    <!-- 缩放回弹：从 1.1 缩回到 1.0 -->
+    <scale
+        android:fromXScale="1.1"
+        android:toXScale="1.0"
+        android:fromYScale="1.1"
+        android:toYScale="1.0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:startOffset="800"
+        android:duration="200"/>
+        
+    <!-- 渐显动画 -->
+    <alpha
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        android:duration="600"/>
+</set>
